@@ -1,16 +1,33 @@
 import cv2
-import numpy as numpy
-from matplotlib import pyplot as plt
 from PIL import Image
-from skimage.util import random_noise
-from imgaug import augmenters as iaa
 
 
-def method1():
-    print("Uno")
+def get_rgb(x, y):
+    image = cv2.imread("image1.jpg")
+    (B, G, R) = image[x, y]
+    print("R={}, G={}, B={}".format(R, G, B))
+    cv2.imshow("Get RGB(X , Y)", image)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
-def method2():
-    print("Dos")
+def prepare_data():
+    x1 = int(input("Digite un valor de inicio 1: "))
+    y1 = int(input("Digite un valor de fin 1 : "))
+    x2 = int(input("Digite un valor de inicio 2: "))
+    y2 = int(input("Digite un valor de fin 2: "))
+    if x1 < x2 and y1 < y2:
+        method2(x1, y1, x2, y2)
+    else:
+        print("\t\n Error, el inicio debe de ser mas pequeno que e fin..!\n")
+        prepare_data()
+
+def method2(x1, y1, x2, y2):
+    image = cv2.imread("image1.jpg")
+    roi = image[x1:y1, x2:y2]
+    cv2.imshow("Original ", image)
+    cv2.imshow("ROI", roi)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def resize_image(image_name, x,y):
     img = cv2.imread(image_name)
@@ -18,7 +35,11 @@ def resize_image(image_name, x,y):
     return res
 
 def method4():
-    print("Cuatro")
+    image = cv2.imread("image1.jpg")
+    resized = cv2.resize(image, (200, 200))
+    cv2.imshow("Fixed Resizing", resized)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def method5():
     print("Cinco")
@@ -28,9 +49,9 @@ def method6():
 
 
 def main():
-    print("********************************************************")
+    print("********************")
     print("*                      MENU                            *")
-    print("********************************************************")
+    print("********************")
     print("")
     print("\n1) Despliegue el R,G,B de un pixel para un x,y proporcionado por el usuario")
     print("\n2) Extraer una región de una imagen una region (ROI) se deben solicitar los dos pares (x,y)\n"
@@ -43,15 +64,26 @@ def main():
 
     opcion = input("selecione una opcion: ")
 
-    if opcion == "1" :
-        method1()
+    if opcion == "1":
+        aux_img = cv2.imread("image1.jpg")
+        (h, w, d) = aux_img.shape
+
+        x = int(input("Digite un valor de X : "))
+        y = int(input("Digite un valor de Y : "))
+
+        if x > h or y > w:
+            print("El punto que se desea conocer excede los límites de la imagen:\n"+
+                  "\tAltura de imagen: " + str(h) + "\n"+
+                  "\tAnchura de imagen: " + str(w))
+        else:
+            get_rgb(x, y)
         main()
 
-    elif opcion == "2" :
-        method2()
+    elif opcion == "2":
+        prepare_data()
         main()
 
-    elif opcion == "3" :
+    elif opcion == "3":
         x = int(input("Digite la altura : "))
         y = int(input("Digite el ancho : "))
         img = resize_image("image1.jpg",x, y)
@@ -60,25 +92,24 @@ def main():
         cv2.destroyAllWindows()
         main()
 
-    elif opcion == "4" :
+    elif opcion == "4":
         method4()
         main()
 
-    elif opcion == "5" :
+    elif opcion == "5":
         method5()
         main()
 
-    elif opcion == "6" :
+    elif opcion == "6":
         method6()
         main()
 
-    elif opcion == "7" :
+    elif opcion == "7":
         print("\n Gracias por utilizar el programa!!")
 
 
     else:
         main()
-
 
 if __name__ == '__main__':
     main()
