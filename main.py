@@ -1,4 +1,6 @@
 import cv2
+import imutils
+import numpy as numpy
 from PIL import Image
 
 
@@ -34,19 +36,31 @@ def resize_image(image_name, x,y):
     res = cv2.resize(img, (x, y))
     return res
 
-def method4():
+def method4(w):
     image = cv2.imread("image1.jpg")
-    resized = cv2.resize(image, (200, 200))
-    cv2.imshow("Fixed Resizing", resized)
+    resized = imutils.resize(image, width=w)
+    cv2.imshow("Original ", image)
+    cv2.imshow("Imutils Resize", resized)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
-def method5():
-    print("Cinco")
+def rotate_image(image_name, angle, dir):
+    image = cv2.imread(image_name)
+    image_center = tuple(numpy.array(image.shape[1::-1]) / 2)
+    if dir == 1:
+        rot_mat = cv2.getRotationMatrix2D(image_center, -angle, 1.0)
+    else:
+        rot_mat = cv2.getRotationMatrix2D(image_center, angle, 1.0)
+    result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
+    return result
 
-def method6():
-    print("Seis")
-
+def blur():
+    image = cv2.imread('image1.jpg')
+    blurred = cv2.GaussianBlur(image, (11, 11), 0)
+    cv2.imshow("Original ", image)
+    cv2.imshow("Blurred", blurred)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
 
 def main():
     print("********************")
@@ -93,15 +107,24 @@ def main():
         main()
 
     elif opcion == "4":
-        method4()
+        w = int(input("Digite el ancho : "))
+        method4(w)
         main()
 
     elif opcion == "5":
-        method5()
+        angle = int(input("Digite los grados que desea rotar la imagen: "))
+        print("1) Derecha\n" +
+              "2) izquierda")
+        dir = int(input("Seleccione la dirección a rotar: "))
+        # if dir !=
+        img = rotate_image("image1.jpg", angle, dir)
+        cv2.imshow("Rotated image", img)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
         main()
 
     elif opcion == "6":
-        method6()
+        blur()
         main()
 
     elif opcion == "7":
