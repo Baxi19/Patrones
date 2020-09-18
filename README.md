@@ -8,7 +8,7 @@
 
 # Laboratorio 1
 
-# Fabian Zamora Rivera
+# Fabián Mauricio Zamora Rivera
 # Randald Villegas Brenes
 
 # II Semestre, 2020
