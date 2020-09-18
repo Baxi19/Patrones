@@ -109,7 +109,7 @@ def blur():
 
 La visión artificial o visión por computador está creciendo de manera exponencial, ya que se está integrando a diferentes áreas y posee un sin fin de aplicaciones, cada día hay más problemas o tareas los cuales pueden ser automatizadas y la visión por computadora  es una área a explotar para cumplir las diferentes tareas realizadas por mano de obra humana pero con menos probabilidades de fallas.
 
-![Imagen](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artificialinventive.com%2Fintroduccion-a-vision-por-computadora%2F&psig=AOvVaw1NP0mrVz5Rm5Gko47snKpL&ust=1600494055524000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOil2ZL_8esCFQAAAAAdAAAAABAP "Visión por Computador")
+![Imagen](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.tekcrispy.com%2F2019%2F04%2F30%2Fmicrosoft-windows-vision-skills%2F&psig=AOvVaw1NP0mrVz5Rm5Gko47snKpL&ust=1600494055524000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOil2ZL_8esCFQAAAAAdAAAAABAV "Visión por Computador")
 
 
 ### Referencias
