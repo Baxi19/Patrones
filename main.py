@@ -20,7 +20,7 @@ def prepare_data():
     if x1 < x2 and y1 < y2:
         method2(x1, y1, x2, y2)
     else:
-        print("\t\n Error, el inicio debe de ser mas pequeno que e fin..!\n")
+        print("\t\n Error, el inicio debe de ser mas pequeno que e fin o el inicio1 debe de ser mas pequeno que el inicio2..!\n")
         prepare_data()
 
 def method2(x1, y1, x2, y2):
