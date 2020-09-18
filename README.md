@@ -65,6 +65,7 @@ def resize_image(image_name, x,y):
     res = cv2.resize(img, (x, y))
     return res
 ~~~
+![Imagen](./result/img3.jpeg "Resultado #3")
 
 * **Redimensiona una imagen pero sin alterar el aspecto, Si lo que se desea es ajustar las dimensiones de la imagen sin afectar sus proporciones originales se utiliza el siguiente código:**
 ~~~
@@ -76,6 +77,7 @@ def method4(w):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ~~~
+![Imagen](./result/img4.jpeg "Resultado #4")
 
 * **Rotar una imagen la cantidad de grados que el usuario requiera. La rotación de imágenes es una herramienta de uso reiterativo a la hora de procesar imágenes, OpenCV cuenta con la función getRotationMatrix2D() para llevarlo a cabo.**
 ~~~
@@ -89,7 +91,7 @@ def rotate_image(image_name, angle, dir):
     result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
     return result
 ~~~
-
+![Imagen](./result/img5.jpeg "Resultado #5")
 
 * **Suavizar una imagen mediante un blur con un kernel Gaussiano. Aplicar filtros para suavizar una imagen puede ser de gran ayuda para reconocer patrones en imágenes, ya que pueden eliminar o ampliar características para llevar a cabo la clasificación y toma de decisiones. En este caso se aplica el filtro blur con un kernel Gaussiano:**
 ~~~
@@ -101,10 +103,13 @@ def blur():
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ~~~
+![Imagen](./result/img6.jpeg "Resultado #6")
 
 ### Conclusión
 
 La visión artificial o visión por computador está creciendo de manera exponencial, ya que se está integrando a diferentes áreas y posee un sin fin de aplicaciones, cada día hay más problemas o tareas los cuales pueden ser automatizadas y la visión por computadora  es una área a explotar para cumplir las diferentes tareas realizadas por mano de obra humana pero con menos probabilidades de fallas.
+
+![Imagen](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.artificialinventive.com%2Fintroduccion-a-vision-por-computadora%2F&psig=AOvVaw1NP0mrVz5Rm5Gko47snKpL&ust=1600494055524000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOil2ZL_8esCFQAAAAAdAAAAABAP "Visión por Computador")
 
 
 ### Referencias
