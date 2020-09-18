@@ -80,9 +80,9 @@ def rotate_image(image_name, angle, dir):
     image = cv2.imread(image_name)
     image_center = tuple(numpy.array(image.shape[1::-1]) / 2)
     if dir == 1:
-        rot_mat = cv2.getRotationMatrix2D(image_center, angle, 1.0)
-    else:
         rot_mat = cv2.getRotationMatrix2D(image_center, -angle, 1.0)
+    else:
+        rot_mat = cv2.getRotationMatrix2D(image_center, angle, 1.0)
     result = cv2.warpAffine(image, rot_mat, image.shape[1::-1], flags=cv2.INTER_LINEAR)
     return result
 ~~~
