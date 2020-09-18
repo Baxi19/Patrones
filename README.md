@@ -109,7 +109,7 @@ def blur():
 
 La visión artificial o visión por computador está creciendo de manera exponencial, ya que se está integrando a diferentes áreas y posee un sin fin de aplicaciones, cada día hay más problemas o tareas los cuales pueden ser automatizadas y la visión por computadora  es una área a explotar para cumplir las diferentes tareas realizadas por mano de obra humana pero con menos probabilidades de fallas.
 
-![](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.desdelinux.net%2Fopencv-una-biblioteca-para-el-reconocimiento-de-objetos-en-imagenes-y-camaras%2F&psig=AOvVaw3s9V2lcJVvjVF9JzcALzUR&ust=1600494367720000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMCf2KSA8usCFQAAAAAdAAAAABAD)
+![alt text](https://cdn.analyticsvidhya.com/wp-content/uploads/2019/03/CV.jpg)
 
 
 ### Referencias
