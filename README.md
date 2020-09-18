@@ -32,8 +32,8 @@ A continuación se van a mencionar 6 ejemplos específicos en los cuales sirven 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ~~~
-
 ![Imagen](./result/img1.jpeg "Resultado #1")
+
 
 * **Extraer una región de una imagen una región (ROI) se deben solicitar los dos pares (x,y)inicio y fin y desplegar la imagen recortada. Existen ocasiones en que es necesario hacer énfasis en un sector de la imagen, por lo que extraer una región en específico suele ser la mejor opción. Para llevar a cabo esta función se utiliza el siguiente código:**
 ~~~
@@ -56,6 +56,7 @@ def method2(x1, y1, x2, y2):
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 ~~~
+![Imagen](./result/img2.jpeg "Resultado #2")
 
 * **Permitir ajustar el tamaño de una imagen solicitando nueva dimensión en píxeles y muestra la imagen resultante. En caso de necesitar ajustar el tamaño de una imagen se procede de la siguiente manera:**
 ~~~
