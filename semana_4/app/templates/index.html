@@ -1,0 +1,31 @@
+<!-- templates/index.html -->
+
+<html>
+  <head>
+    <title>Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>{{message}}</h1>
+    <img src="../static/images/image.jpg" alt="I" style="width:600px; height:400px;">
+
+    <h1>Range Slider Picture</h1>
+
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <p>Value: <span id="demo"></span></p>
+    </div>
+
+    <script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value;
+
+
+    slider.oninput = function() {
+      output.innerHTML = this.value;
+
+    }
+    </script>
+  </body>
+</html>
