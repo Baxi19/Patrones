@@ -11,5 +11,6 @@ def color_balance():
     value = 50
     return render_template('index.html', message=message, value=value)
 
+
 if __name__ == "__main__":        # on running python app.py
     app.run(debug=True)
