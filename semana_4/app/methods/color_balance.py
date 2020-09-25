@@ -19,7 +19,7 @@ def simplest_cb(img, percent):
     return cv2.merge(out_channels)
 
 if __name__ == '__main__':
-    img = cv2.imread('image1.jpg')
+    img = cv2.imread('../static/images/image1.jpg')
     out = simplest_cb(img, 20)
     cv2.imshow("before", img)
     cv2.imshow("after", out)
