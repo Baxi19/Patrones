@@ -28,8 +28,9 @@ def goodFeaturesToTrack_Demo(val):
     # Show what you got
     cv.namedWindow(source_window)
     cv.imshow(source_window, copy)
+
 # Load source image and convert it to gray
-parser = argparse.ArgumentParser(description='Code for Shi-Tomasi corner detector tutorial.')
+parser = argparse.ArgumentParser(description='Code for Shi-Tomasi corner detector ')
 parser.add_argument('--input', help='Path to input image.', default='img.jpg')
 args = parser.parse_args()
 src = cv.imread(cv.samples.findFile(args.input))
