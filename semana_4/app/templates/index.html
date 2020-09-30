@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   </head>
   <body>
+    {% extends "bootstrap/base.html" %}
     <h1>{{message}}</h1>
     <img src="../static/images/image.jpg" alt="I" style="width:600px; height:400px;">
 
@@ -15,6 +16,9 @@
       <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
       <p>Value: <span id="demo"></span></p>
     </div>
+
+
+
 
     <script>
     var slider = document.getElementById("myRange");
