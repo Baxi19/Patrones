@@ -3,8 +3,10 @@ import cv2 as cv
 import numpy as np
 import argparse
 import random as rng
+
+
 source_window = 'Image'
-maxTrackbar = 100
+maxTrackbar = 1000
 rng.seed(12345)
 def goodFeaturesToTrack_Demo(val):
     maxCorners = max(val, 1)
@@ -29,9 +31,10 @@ def goodFeaturesToTrack_Demo(val):
     cv.namedWindow(source_window)
     cv.imshow(source_window, copy)
 
+
 # Load source image and convert it to gray
 parser = argparse.ArgumentParser(description='Code for Shi-Tomasi corner detector ')
-parser.add_argument('--input', help='Path to input image.', default='img.jpg')
+parser.add_argument('--input', help='Path to input image.', default='../img2.jpg')
 args = parser.parse_args()
 src = cv.imread(cv.samples.findFile(args.input))
 if src is None:
@@ -40,8 +43,9 @@ if src is None:
 src_gray = cv.cvtColor(src, cv.COLOR_BGR2GRAY)
 # Create a window and a trackbar
 cv.namedWindow(source_window)
-maxCorners = 23 # initial threshold
+maxCorners = 500 # initial threshold
 cv.createTrackbar('Threshold: ', source_window, maxCorners, maxTrackbar, goodFeaturesToTrack_Demo)
 cv.imshow(source_window, src)
 goodFeaturesToTrack_Demo(maxCorners)
 cv.waitKey()
+
