@@ -1,6 +1,5 @@
 import cv2 as cv
 
-
 # FAST Algorithm for Corner Detection
 def fast_corner_detection(image_path):
     # Sencillo
